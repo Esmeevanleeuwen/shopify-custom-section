@@ -1,0 +1,133 @@
+{{ 'custom-section.css?v=1.1' | asset_url | stylesheet_tag }}
+
+<section class="promo-section">
+    <!-- Desktop versie -->
+    <div class="desktop">
+        <div class="promo-left">
+            <div class="promo-text">
+                <h2>{{ section.settings.custom_heading }}</h2>
+                <a href="#" class="btn">Shop Now</a>
+            </div>
+            <div class="image-left">
+                <img src="{{ section.settings.left_image | img_url: 'large' }}" alt="Left Image">
+            </div>
+        </div>
+
+        <div class="promo-right">
+            <div class="image-right">
+                <img src="{{ section.settings.right_image | img_url: 'large' }}" alt="Right Image">
+                <div class="product-badge">
+                    <div class="product-badge-text">
+                        <span>{{ section.settings.product_name }}</span>
+                        <span>{{ section.settings.product_price }}</span>
+                    </div>
+                    <img src="{{ section.settings.right_image | img_url: 'small' }}" alt="{{ section.settings.product_name }}">
+                </div>
+            </div>
+
+            <div class="right-text">
+                <p>At suspendisse augue lectus arcu, accumsan ut sit posuere vitae sit tincidunt semper eu proin leo gravida cursus.</p>
+                <a href="#" class="read-more">Read More</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobiele versie (carousel) -->
+    <div class="mobile">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <!-- Slide 1: Eerste afbeelding met overlay -->
+                <div class="swiper-slide">
+                    <div class="image-container">
+                        <img src="{{ section.settings.left_image | img_url: 'large' }}" alt="Left Image" class="main-image">
+                        <div class="product-badge">
+                            <img src="{{ section.settings.product_image | img_url: 'small' }}" alt="Product Image" class="badge-image">
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 2: Tweede afbeelding -->
+                <div class="swiper-slide">
+                    <img src="{{ section.settings.right_image | img_url: 'large' }}" alt="Right Image" class="main-image">
+                </div>
+            </div>
+            <!-- Paginering en navigatie -->
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+        <div class="promo-text">
+            <p>At suspendisse augue lectus arcu, accumsan ut sit posuere vitae sit tincidunt semper eu proin leo gravida cursus.</p>
+        </div>
+    </div>
+</section>
+
+
+<style>
+
+
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    var swiper = new Swiper('.swiper-container', {
+        loop: true, // Herhaal slides
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        slidesPerView: 1,
+        spaceBetween: 10,
+    });
+});
+
+</script>
+
+{% schema %}
+{
+   "name": "Custom Liquid Section",
+   "settings": [
+     {
+       "type": "text",
+       "id": "custom_heading",
+       "label": "Koptekst",
+       "default": "Smarten up your work look or throw on a blazer with jeans for the weekend"
+     },
+     {
+       "type": "image_picker",
+       "id": "left_image",
+       "label": "Afbeelding Links"
+     },
+     {
+       "type": "image_picker",
+       "id": "right_image",
+       "label": "Afbeelding Rechts"
+     },
+     {
+       "type": "image_picker",
+       "id": "product_image",
+       "label": "Afbeelding Product (Overlay)"
+     },
+     {
+       "type": "text",
+       "id": "product_name",
+       "label": "Productnaam",
+       "default": "Saffiano Leather Bag 2005"
+     },
+     {
+       "type": "text",
+       "id": "product_price",
+       "label": "Prijs",
+       "default": "€199,95"
+     }
+   ],
+   "presets": [
+     {
+       "name": "Esmee Section Preset"
+     }
+   ]
+}
+{% endschema %}

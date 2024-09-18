@@ -1,0 +1,482 @@
+  /* Verberg de mobiele weergave standaard */
+  .mobile {
+    display: none;
+  } /* Toon de desktop weergave standaard */
+  .desktop {
+    display: flex;
+    gap: 1.5rem;
+  } /* Mobiele weergave: toon de carousel */
+  @media (max-width: 768px) {
+    .desktop {
+      display: none; /* Verberg de desktop op mobiel */
+    }
+    .mobile {
+      display: block; /* Toon de mobiele weergave (carousel) */
+    }
+    .swiper-container {
+      width: 100%;
+      height: auto;
+    }
+    .swiper-slide img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+  }
+    .right-text{
+      max-width: 500px;
+    }
+  
+    .promo-section .promo-left .promo-text h2 {
+    font-size: 24px;
+    color: #333;
+  }
+  
+  
+    html, body {
+      overflow-x: hidden;  /* Verberg horizontaal scrollen voor de hele pagina */
+  }
+  
+    
+  /* Algemeen sectie-styling */
+    /* Algemeen sectie-styling */
+  .promo-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 3rem 4rem;
+    background-color: #fff;
+    gap: 10rem;
+  }
+  .promo-left {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 1rem;
+  }
+  .promo-text {
+    max-width: 520px;
+    margin-left: 40px;
+  }
+  .promo-text h2 {
+    margin-bottom: 1rem;
+  }
+  .promo-text .btn {
+    margin: 3rem 0 6rem;
+  } /* Zorg dat de badge binnen de afbeelding blijft */
+  .image-right {
+    position: relative; /* Zorgt ervoor dat de badge binnen de afbeelding blijft */
+  } /* Productinformatie badge */
+  .product-badge {
+    position: absolute;
+    bottom: 2rem;
+    background-color: white;
+    padding: 0.75rem 1rem;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 0.875rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    max-width: 350px;
+    z-index: 2;
+    border: 1px solid #e1e1e1;
+    margin: 0 0 0 25rem;
+  } /* Afbeelding in de productbadge */
+  .product-badge img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+  } /* Productnaam en prijs */
+  .product-badge-text {
+    display: flex;
+    flex-direction: column;
+  }
+  .product-badge-text span:first-child {
+    font-weight: bold;
+    font-size: 0.95rem;
+    color: #333;
+  }
+  .product-badge-text span:last-child {
+    font-weight: normal;
+    font-size: 0.85rem;
+    color: #666;
+  }
+  .right-text p {
+    font-size: 2rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+  }/* Algemeen sectie-styling */
+  .promo-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 3rem 4rem;
+    background-color: #fff;
+    gap: 10rem;
+  }
+  .promo-left {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 1rem;
+  }
+  .promo-text {
+    max-width: 520px;
+    margin-left: 40px;
+  }
+  .promo-text h2 {
+    margin-bottom: 1rem;
+  }
+  .promo-text .btn {
+    margin: 3rem 0 6rem;
+  } /* Zorg dat de badge binnen de afbeelding blijft */
+  .image-right {
+    position: relative; /* Zorgt ervoor dat de badge binnen de afbeelding blijft */
+  } /* Productinformatie badge */
+  .product-badge {
+    position: absolute;
+    bottom: 2rem;
+    background-color: white;
+    padding: 0.75rem 1rem;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 0.875rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    max-width: 350px;
+    z-index: 2;
+    border: 1px solid #e1e1e1;
+    margin: 0 0 0 25rem;
+  } /* Afbeelding in de productbadge */
+  .product-badge img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+  } /* Productnaam en prijs */
+  .product-badge-text {
+    display: flex;
+    flex-direction: column;
+  }
+  .product-badge-text span:first-child {
+    font-weight: bold;
+    font-size: 0.95rem;
+    color: #333;
+  }
+  .product-badge-text span:last-child {
+    font-weight: normal;
+    font-size: 0.85rem;
+    color: #666;
+  }
+  .right-text p {
+    font-size: 2rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+  }/* Algemeen sectie-styling */
+  .promo-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 3rem 4rem;
+    background-color: #fff;
+    gap: 10rem;
+  }
+  .promo-left {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 1rem;
+  }
+  .promo-text {
+    max-width: 520px;
+    margin-left: 40px;
+  }
+  .promo-text h2 {
+    margin-bottom: 1rem;
+  }
+  .promo-text .btn {
+    margin: 3rem 0 6rem;
+  } /* Zorg dat de badge binnen de afbeelding blijft */
+  .image-right {
+    position: relative; /* Zorgt ervoor dat de badge binnen de afbeelding blijft */
+  } /* Productinformatie badge */
+  .product-badge {
+    position: absolute;
+    bottom: 2rem;
+    background-color: white;
+    padding: 0.75rem 1rem;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 0.875rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    max-width: 350px;
+    z-index: 2;
+    border: 1px solid #e1e1e1;
+    margin: 0 0 0 25rem;
+  } /* Afbeelding in de productbadge */
+  .product-badge img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+  } /* Productnaam en prijs */
+  .product-badge-text {
+    display: flex;
+    flex-direction: column;
+  }
+  .product-badge-text span:first-child {
+    font-weight: bold;
+    font-size: 0.95rem;
+    color: #333;
+  }
+  .product-badge-text span:last-child {
+    font-weight: normal;
+    font-size: 0.85rem;
+    color: #666;
+  }
+  .right-text p {
+    font-size: 2rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+  }/* Algemeen sectie-styling */
+  .promo-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 3rem 4rem;
+    background-color: #fff;
+    gap: 10rem;
+  }
+  .promo-left {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 1rem;
+  }
+  .promo-text {
+    max-width: 520px;
+    margin-left: 40px;
+  }
+  .promo-text h2 {
+    margin-bottom: 1rem;
+  }
+  .promo-text .btn {
+    margin: 3rem 0 6rem;
+  } /* Zorg dat de badge binnen de afbeelding blijft */
+  .image-right {
+    position: relative; /* Zorgt ervoor dat de badge binnen de afbeelding blijft */
+  } /* Productinformatie badge */
+  .product-badge {
+    position: absolute;
+    bottom: 2rem;
+    background-color: white;
+    padding: 0.75rem 1rem;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 0.875rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    max-width: 350px;
+    z-index: 2;
+    border: 1px solid #e1e1e1;
+    margin: 0 0 0 25rem;
+  } /* Afbeelding in de productbadge */
+  .product-badge img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+  } /* Productnaam en prijs */
+  .product-badge-text {
+    display: flex;
+    flex-direction: column;
+  }
+  .product-badge-text span:first-child {
+    font-weight: bold;
+    font-size: 0.95rem;
+    color: #333;
+  }
+  .product-badge-text span:last-child {
+    font-weight: normal;
+    font-size: 0.85rem;
+    color: #666;
+  }
+  .right-text p {
+    font-size: 2rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+  }/* Algemeen sectie-styling */
+  .promo-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 3rem 4rem;
+    background-color: #fff;
+    gap: 10rem;
+  }
+  .promo-left {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 1rem;
+  }
+  .promo-text {
+    max-width: 520px;
+    margin-left: 40px;
+  }
+  .promo-text h2 {
+    margin-bottom: 1rem;
+  }
+  .promo-text .btn {
+    margin: 3rem 0 6rem;
+  } /* Zorg dat de badge binnen de afbeelding blijft */
+  .image-right {
+    position: relative; /* Zorgt ervoor dat de badge binnen de afbeelding blijft */
+  } /* Productinformatie badge */
+  .product-badge {
+    position: absolute;
+    bottom: 2rem;
+    background-color: white;
+    padding: 0.75rem 1rem;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 0.875rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    max-width: 350px;
+    z-index: 2;
+    border: 1px solid #e1e1e1;
+    margin: 0 0 0 25rem;
+  } /* Afbeelding in de productbadge */
+  .product-badge img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+  } /* Productnaam en prijs */
+  .product-badge-text {
+    display: flex;
+    flex-direction: column;
+  }
+  .product-badge-text span:first-child {
+    font-weight: bold;
+    font-size: 0.95rem;
+    color: #333;
+  }
+  .product-badge-text span:last-child {
+    font-weight: normal;
+    font-size: 0.85rem;
+    color: #666;
+  }
+  .right-text p {
+    font-size: 2rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+  }
+  .promo-section {
+      display: flex;
+      justify-content: space-between;
+      padding: 3rem 4rem;
+      background-color: #fff;
+      gap: 10rem;
+  }
+  .promo-left {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      gap: 1rem;
+  }
+  .promo-text {
+      max-width: 520px;
+      margin-left: 40px;
+  }
+  .promo-text h2 {
+      margin-bottom: 1rem;
+      font-size: 20px;
+  }
+  .promo-text .btn {
+      margin: 3rem 0 6rem;
+  }
+  
+  /* Zorg dat de badge binnen de afbeelding blijft */
+  .image-right {
+      position: relative; /* Zorgt ervoor dat de badge binnen de afbeelding blijft */
+  }
+  
+  /* Productinformatie badge */
+  .product-badge {
+      position: absolute;
+      bottom: 2rem;
+      background-color: white;
+      padding: 0.75rem 1rem;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+      font-size: 0.875rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      max-width: 350px;
+      z-index: 2;
+      border: 1px solid #e1e1e1;
+  }
+  
+  /* Afbeelding in de productbadge */
+  .product-badge img {
+      width: 50px;
+      height: 50px;
+      object-fit: cover;
+  }
+  
+  /* Verberg de mobiele weergave standaard */
+  .mobile {
+      display: none;
+  }
+  
+  /* Toon de desktop weergave standaard */
+  .desktop {
+      display: flex;
+      gap: 1.5rem;
+  }
+  
+  /* Mobiele weergave */
+  @media (max-width: 768px) {
+      .desktop {
+          display: none;
+      }
+      .mobile {
+          display: block;
+      }
+  
+      .swiper-container {
+          width: 100%;
+          height: auto;
+      }
+  
+      .swiper-slide {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+      }
+  
+      .swiper-slide img {
+          width: 100%;
+          height: auto;
+          object-fit: cover;
+      }
+  
+      .product-badge {
+          position: absolute;
+          bottom: 10px;
+          left: 10px;
+          background-color: white;
+          padding: 0.5rem;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+  
+      .promo-text {
+          text-align: center;
+          margin-top: 1rem;
+      }
+  
+      .promo-text p {
+          font-size: 1.2rem;
+          line-height: 1.5;
+      }
+  }
+  .swiper-slide {
+      width: 100% !important;  /* Zorg ervoor dat elke slide de volledige breedte van de container inneemt */
+      flex-shrink: 0;  /* Voorkom dat de slides krimpen */
+  }
+  
