@@ -1,0 +1,12 @@
+{
+    "sections": {
+      "custom-promo-section": {
+        "type": "custom-promo-section",
+        "settings": {}
+      }
+    },
+    "order": [
+      "custom-promo-section"
+    ]
+  }
+  

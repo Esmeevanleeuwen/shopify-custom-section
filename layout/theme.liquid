@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page_title }} - {{ shop.name }}</title>
+
+    <!-- Laad de custom CSS en Swiper CSS -->
+    {{ 'custom-section.css?v=1.1' | asset_url | stylesheet_tag }}
+    <link rel="stylesheet" href="{{ 'swiper-bundle.min.css' | asset_url }}">
+</head>
+<body>
+
+    <!-- Header Sectie (nog te bouwen) -->
+    {% section 'header' %}
+
+    <!-- Hoofdcontent van de pagina -->
+    {{ content_for_layout }}
+
+    <!-- Footer Sectie (nog te bouwen) -->
+    {% section 'footer' %}
+
+    <!-- Laad de Swiper JS -->
+    <script src="{{ 'swiper-bundle.min.js' | asset_url }}"></script>
+
+    <!-- Custom JS voor Swiper Initialisatie -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var swiper = new Swiper('.swiper-container', {
+                loop: true,
+                pagination: false,
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                slidesPerView: 1,
+                spaceBetween: 10,
+            });
+        });
+    </script>
+
+</body>
+</html>
