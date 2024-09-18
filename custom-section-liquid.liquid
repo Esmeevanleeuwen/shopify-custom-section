@@ -6,7 +6,7 @@
         <div class="promo-left">
             <div class="promo-text">
                 <h2>{{ section.settings.custom_heading }}</h2>
-                <a href="#" class="btn">Shop Now</a>
+                <a href="#" class="btn">Shop Now <span class="arrow">➔</span></a>
             </div>
             <div class="image-left">
                 <img src="{{ section.settings.left_image | img_url: 'large' }}" alt="Left Image">
@@ -18,10 +18,11 @@
                 <img src="{{ section.settings.right_image | img_url: 'large' }}" alt="Right Image">
                 <div class="product-badge">
                     <div class="product-badge-text">
-                        <span>{{ section.settings.product_name }}</span>
-                        <span>{{ section.settings.product_price }}</span>
+                        <span class="product-name">{{ section.settings.product_name }}</span>
+                        <br>
+                        <span class="product-price">{{ section.settings.product_price }}</span>
                     </div>
-                    <img src="{{ section.settings.right_image | img_url: 'small' }}" alt="{{ section.settings.product_name }}">
+                    <img src="{{ section.settings.product_image | img_url: 'small' }}" alt="{{ section.settings.product_name }}">
                 </div>
             </div>
 
@@ -35,46 +36,41 @@
     <!-- Mobiele versie (carousel) -->
     <div class="mobile">
         <div class="swiper-container">
+            <div class="promo-text">
+                <h2>{{ section.settings.custom_heading }}</h2>
+                <a href="#" class="btn">Shop Now</a>
+            </div>
             <div class="swiper-wrapper">
-                <!-- Slide 1: Eerste afbeelding met overlay -->
+                <!-- Slide 1 -->
                 <div class="swiper-slide">
                     <div class="image-container">
-                        <img src="{{ section.settings.left_image | img_url: 'large' }}" alt="Left Image" class="main-image">
+                        <img src="{{ section.settings.right_image | img_url: 'large' }}" alt="Right Image" class="main-image">
                         <div class="product-badge">
                             <img src="{{ section.settings.product_image | img_url: 'small' }}" alt="Product Image" class="badge-image">
                         </div>
                     </div>
                 </div>
-                <!-- Slide 2: Tweede afbeelding -->
+                <!-- Slide 2 -->
                 <div class="swiper-slide">
-                    <img src="{{ section.settings.right_image | img_url: 'large' }}" alt="Right Image" class="main-image">
+                    <img src="{{ section.settings.left_image | img_url: 'large' }}" alt="Left Image" class="main-image">
                 </div>
             </div>
-            <!-- Paginering en navigatie -->
-            <div class="swiper-pagination"></div>
+            <!-- Navigatieknoppen voor de carousel -->
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
         </div>
         <div class="promo-text">
             <p>At suspendisse augue lectus arcu, accumsan ut sit posuere vitae sit tincidunt semper eu proin leo gravida cursus.</p>
+            <a href="#" class="read-more">Read More</a>
         </div>
     </div>
 </section>
-
-
-<style>
-
-
-</style>
 
 <script>
 document.addEventListener('DOMContentLoaded', function () {
     var swiper = new Swiper('.swiper-container', {
         loop: true, // Herhaal slides
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
+        pagination: false, // Geen paginering
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
@@ -83,8 +79,13 @@ document.addEventListener('DOMContentLoaded', function () {
         spaceBetween: 10,
     });
 });
-
 </script>
+
+<!-- Swiper CSS -->
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+<!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
 {% schema %}
 {
