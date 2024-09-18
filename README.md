@@ -2,6 +2,12 @@
 
 Deze Shopify-sectie toont een promotiebanner met productafbeeldingen, een knop, en een productbadge. De sectie is responsive en bevat een Swiper-carousel voor mobiele weergave.
 
+Bekijk de sectie live op de volgende pagina:
+
+[https://esmeetestdigifist.myshopify.com/?_ab=0&_fd=0&_sc=1](https://esmeetestdigifist.myshopify.com/?_ab=0&_fd=0&_sc=1)
+
+**Wachtwoord**: esmeevanleeuwen
+
 ## Functies
 
 - **Responsive Design**: Past zich aan voor zowel desktop als mobiel (met een carousel op mobiel).
